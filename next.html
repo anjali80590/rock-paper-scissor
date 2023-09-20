@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      body {
+        background-color: #45a049;
+      }
+      #star {
+        position: absolute;
+        top: 70px;
+        left: 500px;
+      }
+      #cup {
+        position: absolute;
+        top: 220px;
+        z-index: 1;
+        left: 650px;
+      }
+      #hurry {
+        position: absolute;
+        top: 450px;
+        left: 550px;
+      }
+      #won {
+        position: absolute;
+        top: 550px;
+        left: 600px;
+        color: white;
+      }
+
+      .rules-button {
+        position: fixed;
+        bottom: 70px;
+        right: 170px;
+        background-color: #45a049;
+        color: white;
+        padding: 10px 20px;
+        border: 2px solid white;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 20px;
+        padding: 10px;
+      }
+      li {
+        list-style-type: square;
+        color: yellow;
+        margin-left: 5px;
+      }
+      .list {
+        line-height: 24px;
+        color: white;
+      }
+      .rules-popup {
+        display: none;
+        width: 250px;
+        text-align: left;
+        position: absolute;
+        right: 90px;
+        bottom: 130px;
+        border: 5px solid white;
+        color: white;
+        background-color: #013220;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px #00000033;
+      }
+
+      /* Close button styles */
+      .close-button {
+        position: absolute;
+        color: white;
+        text-align: center;
+        font-size: 50px;
+        font-weight: bold;
+        width: 40px;
+        background-color: red;
+        border: 2px solid white;
+        border-radius: 50%;
+        top: -30px;
+        right: -20px;
+
+        cursor: pointer;
+      }
+      #play-again {
+  position: absolute;
+  bottom: 60px;
+  left: 700px;
+  background-color: #f6faf6;
+  color: #414141;
+  padding: 10px 20px;
+  border: 2px solid white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
+}
+    </style>
+  </head>
+  <body>
+    <img src="stars.png" id="star" alt="" />
+    <img src="cup.png" id="cup" alt="" />
+    <img src="hurraytext.png" id="hurry" alt="" />
+    <h1 id="won">YOU WON THE GAME !</h1>
+    <a href="index.html"> <button id="play-again">Play Again </button></a>
+    <button class="rules-button" onclick="showRules()">Rules</button>
+    <div id="rules-popup" class="rules-popup">
+      <span class="close-button" onclick="closeRules()">&times;</span>
+      <h1>Game Rules</h1>
+      <ul>
+        <li>
+          <span class="list"
+            >Rock beats scissors,scissors beat paper and paper beats rock</span
+          >
+        </li>
+        <li>
+          <span class="list"
+            >Agree ahead of time whether you will count off " rock , paper ,
+            scissors , shout " or just "rock , paper ,scissors"</span
+          >
+        </li>
+        <li>
+          <span class="list"
+            >Use rock , paper , scissors to settle minor decisions or simply
+            play to pass the time</span
+          >
+        </li>
+        <li>
+          <span class="list">
+            if both players lay down the same hand each player lays down another
+            hand
+          </span>
+        </li>
+      </ul>
+    </div>
+    <script>
+      function showRules() {
+        const rulesPopup = document.getElementById("rules-popup");
+        rulesPopup.style.display = "block";
+      }
+
+      function closeRules() {
+        const rulesPopup = document.getElementById("rules-popup");
+        rulesPopup.style.display = "none";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="main">
+        <h1>
+          Rock <br />Paper <br />
+          Scissors
+        </h1>
+        <div class="game-score">
+          <p class="cscore">
+            Player <br /> score <br />
+            <span id="score-size">0</span>
+          </p>
+          <p class="pscore">
+            Computer <br /> score <br />
+            <span id="score-size">0</span>
+          </p>
+        </div>
+      </div>
+      <div id="game">
+        <div class="lines">
+            <div id="line1" class="choice-button"></div>
+            <div id="line2" class="choice-button"></div>
+            <div id="line3" class="choice-button"></div>
+        </div>
+        <button id="rock" class="choice-button">
+          <img src="rock.png" alt="Rock" />
+        </button>
+        <button id="paper" class="choice-button">
+          <img src="paper.png" alt="Paper" />
+        </button>
+        <button id="scissors" class="choice-button">
+          <img src="scissors.png" alt="Scissors" />
+        </button>
+
+        
+      </div>
+        
+      <div id="choices" class="hidden">
+        <p class="choice">
+          <span class="choice-text">
+            <span class="inline"
+              >You choose: <span id="player-choice-text"></span
+            ></span>
+            <img id="player-choice-img" src="" alt="" />
+          </span>
+          <span class="choice-text">
+            <span class="inline"
+              >Computer choose: <span id="computer-choice-text"></span
+            ></span>
+            <img id="computer-choice-img" src="" alt="" />
+          </span>
+        </p>
+      </div>
+      <div id="result"></div>
+      <button id="play-again" class="hidden">Play Again</button>
+      <a href="next.html">
+        <button id="next-round" class="hidden">Next </button></a
+      >
+      <button id="replay" class="hidden">Replay</button>
+
+      <button class="rules-button" onclick="showRules()">Rules</button>
+      <div id="rules-popup" class="rules-popup">
+        <span class="close-button" onclick="closeRules()">&times;</span>
+        <h1>Game Rules</h1>
+        <ul>
+            <li><span class="list">Rock beats scissors,scissors beat paper and paper beats rock</span></li>
+            <li><span class="list">Agree ahead of time whether you will count off " rock , paper , scissors , shout " or just "rock , paper ,scissors"</span></li>
+            <li><span class="list">Use rock , paper , scissors to settle minor decisions or simply play to pass the time</span> </li>
+            <li><span class="list">
+                if both players lay down the same hand each player lays down another hand
+            </span></li>
+        </ul>
+      </div>
+
+      <script src="script.js"></script>
+    </div>
+  </body>
+</html>
