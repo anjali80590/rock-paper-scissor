@@ -39,9 +39,11 @@ choiceButtons.forEach((button) => {
       // Update choice display and determine the winner of the round
       playerChoiceText.textContent = playerChoice;
       computerChoiceText.textContent = computerChoice;
-      playerChoiceImg.src = playerChoice + ".png";
-      computerChoiceImg.src = computerChoice + ".png";
+      playerChoiceImg.src =  "./images/" +playerChoice + ".png";
+      computerChoiceImg.src = "./images/"+computerChoice + ".png";
       displayResult(playerChoice, computerChoice);
+
+      
 
       // Show the choices and increment the round count
       choicesDiv.classList.remove("hidden");
